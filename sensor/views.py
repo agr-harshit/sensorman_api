@@ -14,4 +14,4 @@ class SensorReadingCreateView(APIView):
     def get(self, request, *args, **kwargs):
         data = SensorReading.objects.last()
         serializer = SensorNasReadingsSerializer(data)
-        return Response({"data": serializer.data}, status=status.HTTP_200_OK)
+        return Response(serializer.data, status=status.HTTP_200_OK)
