@@ -112,3 +112,5 @@ class SensorReading(models.Model):
     touch_time = models.CharField(max_length=255, null=True, blank=True)
     touch_location = models.CharField(max_length=255, null=True, blank=True)
     model = models.CharField(max_length=255, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True)
